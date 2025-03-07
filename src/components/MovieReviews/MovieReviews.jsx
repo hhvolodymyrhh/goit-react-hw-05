@@ -35,7 +35,7 @@ function MovieReviews() {
       {loader && <Loader />}
       <ul className={css.reviews_list}>
         {reviews ? (
-          reviews?.map(({ id, author, content, author_details }) => {
+          reviews?.map(({ id, author, content }) => {
             <li key={id} className={css.reviews_item}>
               <div className={css.author_info}>
                 <h3>{author}</h3>
