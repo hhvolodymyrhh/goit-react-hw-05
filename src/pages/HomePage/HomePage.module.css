@@ -1,0 +1,12 @@
+.homePageTitle {
+  font-size: 36px;
+  color: #2e3131;
+}
+
+.homePageSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

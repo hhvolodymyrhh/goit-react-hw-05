@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  background-color: #000000;
+}
+
+.navList {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.noActiveLink {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.activeLink {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  text-decoration: underline;
+  color: #00b068;
+}

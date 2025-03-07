@@ -1,0 +1,15 @@
+.cast_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cast_item {
+  max-width: 150px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
