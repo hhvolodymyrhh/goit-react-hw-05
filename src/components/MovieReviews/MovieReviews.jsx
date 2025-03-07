@@ -19,6 +19,7 @@ function MovieReviews() {
         setLoader(true);
         const response = await searchMovieReviews(movieId);
         setReviews(response.results);
+console.log(response)
       } catch (error) {
         console.error(error);
       } finally {
@@ -34,8 +35,10 @@ function MovieReviews() {
     <div>
       {loader && <Loader />}
       <ul className={css.reviews_list}>
+         {}
         {reviews ? (
           reviews?.map(({ id, author, content }) => {
+           
             <li key={id} className={css.reviews_item}>
               <div className={css.author_info}>
                 <h3>{author}</h3>
