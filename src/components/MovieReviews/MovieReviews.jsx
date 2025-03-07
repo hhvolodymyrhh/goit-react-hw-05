@@ -38,16 +38,6 @@ function MovieReviews() {
           reviews?.map(({ id, author, content, author_details }) => {
             <li key={id} className={css.reviews_item}>
               <div className={css.author_info}>
-                <div className={css.img_container}>
-                  <img className={css.author_img}
-                    src={
-                      author_details.avatar_path
-                        ? `https://image.tmdb.org/t/p/w500/${author_details.avatar_path}`
-                        : `https://th.bing.com/th/id/OIP.sAw0F4m0sAbdzDuuoMxoIgHaHa?w=980&h=980&rs=1&pid=ImgDetMain`
-                    }
-                    alt={author}
-                  />
-                </div>
                 <h3>{author}</h3>
               </div>
               <p className={css.author_comment}>{content}</p>
