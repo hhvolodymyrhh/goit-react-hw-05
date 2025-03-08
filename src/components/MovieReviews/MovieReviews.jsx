@@ -38,14 +38,14 @@ console.log(response)
          {}
         {reviews ? (
           reviews?.map(({ id, author, content }) => {
-           
+           return(
             <li key={id} className={css.reviews_item}>
               <div className={css.author_info}>
                 <h3>{author}</h3>
               </div>
               <p className={css.author_comment}>{content}</p>
             </li>
-          })
+          )})
         ) : (
           <li>Error</li>
         )}
