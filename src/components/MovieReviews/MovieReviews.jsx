@@ -19,7 +19,7 @@ function MovieReviews() {
         setLoader(true);
         const response = await searchMovieReviews(movieId);
         setReviews(response.results);
-console.log(response)
+
       } catch (error) {
         console.error(error);
       } finally {
@@ -35,23 +35,22 @@ console.log(response)
     <div>
       {loader && <Loader />}
       <ul className={css.reviews_list}>
-         {}
-        {reviews ? (
-          reviews?.map(({ id, author, content }) => {
-           return(
+        
+        {reviews && reviews.length > 0 ? (
+          reviews.map(({ id, author, content }) => (
             <li key={id} className={css.reviews_item}>
               <div className={css.author_info}>
                 <h3>{author}</h3>
               </div>
               <p className={css.author_comment}>{content}</p>
             </li>
-          )})
+          ))
         ) : (
-          <li>Error</li>
+          <li>Not yet available</li>
         )}
       </ul>
     </div>
   );
-};
+}
 
 export default MovieReviews
